@@ -1,0 +1,203 @@
+/* Main styles */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+
+/* Variables */
+
+:root {
+  --color-win: #78CF82;
+  --color-lose: #D94545;
+  --color-start: #5b85b7;
+  --color-neutral: #445069;
+  --color-neutral-light: #D2D2D2;
+  --color-keys: #37474F;
+  --color-keys-light: #E5E5E5;
+  --font-size-large: 60px;
+  --font-size-medium: 20px;
+  --transition: all .2s ease-in-out;
+}
+
+/* main */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+}
+
+li, ol, ul {
+  padding: 0;
+  display: inline-block;
+}
+
+h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-size-large);
+  margin: 0;
+}
+
+button {
+  margin: 6px;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  color: var(--color-keys);
+  font-size: var(--font-size-medium);
+  background-color: var(--color-keys-light);
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+  box-shadow: 0 0 10px rgba(10,10,10,.4);
+  font-family: 'Quicksand', sans-serif;
+}
+
+button:hover {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  max-height: 900px;
+  text-align: center;
+}
+
+.section {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Title */
+
+.header {
+  color: var(--color-start);
+}
+
+/* Phrase */
+
+.letter {
+  font-size: var(--font-size-medium);
+  height: 65px;
+  width: 65px;
+  padding: 20px 1px 0 1px;
+  margin-right: 2px;
+  color: transparent;
+  background: var(--color-neutral-light);
+  border-radius: 5px;
+  font-family: 'Coiny', cursive;
+}
+
+.space {
+  width: 15px;
+}
+
+.show {
+  color: #000;
+  background-color: #76CE82;
+  box-shadow: 0 0 15px rgba(10,10,10,.6);
+  transition: color, background-color, box-shadow, height, width;
+  transition-duration: 2s, 3s, 500ms, 500ms, 500ms;
+  transition-timing-function: ease-in-out, ease-in-out, cubic-bezier(.72,-0.42,.34,1.66), cubic-bezier(.72,-0.42,.34,1.66), cubic-bezier(.72,-0.42,.34,1.66);
+}
+
+/* Keyboard */
+
+.keyrow {
+  display: flex;
+  justify-content: center;
+}
+
+.chosen {
+  background: var(--color-neutral);
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+  color: #FFFFFF;
+}
+
+.btn__reset {
+  padding: 10px;
+  margin: 50px auto;
+  background: #FFFFFF;
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.btn__reset:hover {
+  cursor: pointer;
+  color: #FFF;
+  background: #2f5387;
+  box-shadow: 0 0 15px rgba(10,10,10,.4);
+}
+
+.disabled {
+  background-color: grey;
+  color: white;
+}
+
+/* Give button color change effect to emphasis its clickableness..... */
+
+
+/* Overlay */
+
+#overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  color: #FFFFFF;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+
+.title {
+  color: #FFF;
+}
+
+.start {
+  background-color: var(--color-start);
+}
+
+.start a {
+  color: var(--color-win);
+}
+
+.win {
+  background-color: var(--color-win);
+  padding-top: 70px;
+}
+
+.win a {
+  color: var(--color-win);
+  position: relative;
+  top: 60px;
+}
+
+.lose {
+  background-color: var(--color-lose);
+  padding-top: 70px;
+}
+
+.lose a {
+  position: relative;
+  top: 60px;
+  color: var(--color-lose);
+}
+
+
